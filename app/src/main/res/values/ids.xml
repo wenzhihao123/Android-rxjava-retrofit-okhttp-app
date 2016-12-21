@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="errorView" type="id"/>
+    <item name="contentView" type="id"/>
+    <item name="error_tv" type="id"/>
+    <item name="error_iv" type="id"/>
+    <item name="f_content" type="id"/>
+    <item name="titleBar" type="id"/>
+    <item name="loginView" type="id"/>
+    <item name="login_tv" type="id"/>
+</resources>

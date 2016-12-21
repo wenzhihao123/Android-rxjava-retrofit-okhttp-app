@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">段子手</string>
+    <string name="circle_send">讲个段子</string>
+    <string name="circle_fans">我的粉丝</string>
+    <string name="circle_focus">我关注的</string>
+    <string name="circle_find">寻找段子手</string>
+
+    <string name="status_mutual_follow">互相关注</string>
+    <string name="status_follower_desc">Ta关注了你</string>
+    <string name="status_following_desc">已关注</string>
+    <string name="status_cancelFollow">取消关注</string>
+    <string name="status_none_follow_desc">无</string>
+    <string name="status_follow">关注</string>
+    <string name="status_followers">粉丝</string>
+    <string name="status_following">关注</string>
+</resources>

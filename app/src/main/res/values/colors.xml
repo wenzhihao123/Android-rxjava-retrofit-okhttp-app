@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="font_color">#999999</color>
+    <color name="line">#e6e6e6</color>
+    <color name="font_color1">#666666</color>
+    <color name="bg_color">#f5f5f5</color>
+    <color name="white">#ffffff</color>
+    <color name="black30">#88000000</color>
+    <color name="black">#000000</color>
+
+    <color name="tree_green">#5CB98D</color>
+    <color name="dark_tree_green">#428666</color>
+    <color name="status_like_pink">#ff6868</color>
+</resources>

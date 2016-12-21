@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wzh.fun.view.ObservableScrollView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/bg_color"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wether_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#88000000" />
+
+                <TextView
+                    android:id="@+id/nameView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="请登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big" />
+
+                <com.wzh.fun.view.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_head"
+                    app:border_color="@color/white"
+                    app:border_width="2dp" />
+                <TextView
+                    android:id="@+id/login_out"
+                    android:layout_gravity="right"
+                    android:text="注销"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/login_out"
+                    android:textSize="@dimen/font_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/cache"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:gravity="center|left"
+                    android:padding="16dp"
+                    android:text="清除缓存" />
+
+                <TextView
+                    android:id="@+id/cacheSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="clip_vertical|right"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:text="@null"
+                    android:textColor="@color/font_color" />
+            </FrameLayout>
+
+            <include layout="@layout/common_line" />
+
+            <FrameLayout
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/version"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:gravity="center|left"
+                    android:padding="16dp"
+                    android:text="版本更新" />
+
+                <TextView
+                    android:id="@+id/versionCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="clip_vertical|right"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:text="@null"
+                    android:textColor="@color/font_color" />
+            </FrameLayout>
+
+            <include layout="@layout/common_line" />
+
+            <TextView
+                android:id="@+id/suggest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/suggest"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="意见反馈" />
+
+            <include layout="@layout/common_line" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/about"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="关于" />
+
+        </LinearLayout>
+    </com.wzh.fun.view.ObservableScrollView>
+</RelativeLayout>

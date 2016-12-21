@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_height">45dp</dimen>
+    <dimen name="image_height">20dp</dimen>
+    <dimen name="font_smalll">11sp</dimen>
+    <dimen name="font_normal">13sp</dimen>
+    <dimen name="font_middle">15sp</dimen>
+    <dimen name="font_big">18sp</dimen>
+    <dimen name="font_super_big">22sp</dimen>
+
+    <dimen name="avatarSize">50dp</dimen>
+
+    <dimen name="status_layout_avatar_size">60dp</dimen>
+    <dimen name="status_imageMaxSize">100dp</dimen>
+    <dimen name="status_like_size">22dp</dimen>
+    <dimen name="image_thumbnail_size">120dp</dimen>
+    <dimen name="image_thumbnail_spacing">2dp</dimen>
+
+</resources>

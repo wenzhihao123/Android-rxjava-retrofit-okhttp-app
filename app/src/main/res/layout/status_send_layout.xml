@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/common_toolbar"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:minHeight="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:padding="10dp"
+        android:hint="在这里说点什么..."
+        android:textColorHint="@color/font_color"
+        android:background="@drawable/bg_edittext"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imageAction"
+            android:layout_width="100dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_photo_add"
+            android:layout_height="100dp" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:padding="1dp"
+            android:background="@drawable/bg_plus"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/default_load" />
+    </LinearLayout>
+
+</LinearLayout>

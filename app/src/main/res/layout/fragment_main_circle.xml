@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/common_toolbar"/>
+    <include layout="@layout/common_error" />
+    <include layout="@layout/common_nologin" />
+    <com.wzh.fun.view.listview.CustomPtrFrameLayout
+        android:id="@id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wzh.fun.view.listview.LoadMoreListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:divider="@color/bg_color"
+            android:dividerHeight="10dp"
+            android:listSelector="@android:color/transparent" />
+    </com.wzh.fun.view.listview.CustomPtrFrameLayout>
+
+</LinearLayout>

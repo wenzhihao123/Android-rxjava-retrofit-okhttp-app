@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9e9e9"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/back_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/toolbar_left_iv"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/toolbar_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:maxLength="12"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="xxxx"-->
+            <!--android:ellipsize="end"-->
+            <!--android:visibility="visible"-->
+            <!--android:singleLine="true"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/font_middle" />-->
+        <LinearLayout
+            android:id="@+id/right_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/toolbar_righ_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="返回"
+                android:visibility="gone"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/font_normal" />
+
+            <ImageView
+                android:id="@+id/toolbar_righ_iv"
+                android:layout_width="25dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_height="25dp"
+                android:src="@null" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+            <RadioButton
+                android:id="@+id/item1"
+                android:layout_width="wrap_content"
+                android:text="推荐段子"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:includeFontPadding="false"
+                android:checked="true"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/right_open_selector"
+                android:textSize="@dimen/font_smalll"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:text="最热趣图"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:includeFontPadding="false"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/left_open_selector"
+                android:textSize="@dimen/font_smalll"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/f_content"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </FrameLayout>
+
+</LinearLayout>

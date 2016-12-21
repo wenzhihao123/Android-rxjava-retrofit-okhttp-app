@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/send"
+        android:background="@color/white"
+        android:drawablePadding="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="@dimen/font_middle"
+        android:text="@string/circle_send" />
+
+    <include layout="@layout/common_line" />
+
+    <TextView
+        android:id="@+id/fans"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/fans"
+        android:drawablePadding="10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="@dimen/font_middle"
+        android:text="@string/circle_fans" />
+
+    <include layout="@layout/common_line" />
+
+    <TextView
+        android:id="@+id/focus"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/focus"
+        android:drawablePadding="10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="@dimen/font_middle"
+        android:text="@string/circle_focus" />
+    <include layout="@layout/common_line" />
+
+    <TextView
+        android:id="@+id/find"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/find"
+        android:drawablePadding="10dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="@dimen/font_middle"
+        android:text="@string/circle_find" />
+
+</LinearLayout>

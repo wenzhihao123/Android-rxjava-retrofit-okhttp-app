@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'Fun'
+            keyPassword 'android'
+            storeFile file('D:/releaseKey.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.wzh.fun"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'me.iwf.photopicker:PhotoPicker:0.1.8'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:support-v13:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    compile 'com.facebook.fresco:fresco:0.7.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    testCompile 'junit:junit:4.12'
+    // LeanCloud 基础包
+    compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
+    // 推送与实时聊天需要的包
+    compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
+    // LeanCloud 统计包
+    compile 'cn.leancloud.android:avoscloud-statistics:v3.+'
+    // LeanCloud 用户反馈包
+    compile 'cn.leancloud.android:avoscloud-feedback:v3.+@aar'
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile 'cn.leancloud.android:avoscloud-sns:v3.+@aar'
+    // 目前新浪微博官方只提供 jar 包的集成方式
+
+    // 请手动下载新浪微博 SDK 的 jar 包，将其放在 libs 目录下进行集成
+
+    // LeanCloud 应用内搜索包
+    compile 'cn.leancloud.android:avoscloud-search:v3.+@aar'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/libapshare.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/SocialSDK_alipay.jar')
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_renren.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/SocialSDK_sms.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/open_sdk_r5756_lite.jar')
+    compile files('libs/weiboSDKCore_3.1.4.jar')
+    compile files('libs/SocialSDK_Sina_Full.jar')
+    compile files('libs/SocialSDK_tencentWB.jar')
+    compile files('libs/SocialSDK_QQ_Full.jar')
+}

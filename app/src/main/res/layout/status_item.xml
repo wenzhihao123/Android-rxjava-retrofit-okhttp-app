@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.wzh.fun.view.CircleImageView
+            android:id="@+id/avatarView"
+            android:layout_width="@dimen/status_layout_avatar_size"
+            android:layout_height="@dimen/status_layout_avatar_size"
+            app:border_width="2dp"
+            app:border_color="@color/bg_color"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:minHeight="@dimen/status_layout_avatar_size"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_layout_avatar_size"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/font_middle" />
+
+                    <TextView
+                        android:id="@+id/timeView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="09-10-09"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/font_smalll" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_color1"
+        android:textSize="@dimen/font_middle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/statusImage"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="300dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/default_place"
+            android:background="@color/white" />
+        <include layout="@layout/common_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/likeLayout"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:text="（点赞人数）"
+                    android:textColor="@color/font_color1"
+                    android:textSize="@dimen/font_smalll" />
+                <ImageView
+                    android:id="@+id/likeView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/status_ic_player_liked" />
+
+                <TextView
+                    android:id="@+id/likeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:text="18"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/font_smalll" />
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                />
+            <LinearLayout
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="分享给朋友"
+                    android:gravity="center"
+                    android:textColor="@color/font_color1"
+                    android:textSize="@dimen/font_smalll" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
