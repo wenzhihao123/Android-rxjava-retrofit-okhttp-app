@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
@@ -28,6 +29,7 @@ import com.wzh.fun.chat.CircleServerUtils;
 import com.wzh.fun.ui.activity.BaseActivity;
 import com.wzh.fun.ui.fragment.BaseFragment;
 import com.wzh.fun.utils.GlideCircleTransform;
+import com.wzh.fun.utils.PermissionUtils;
 import com.wzh.fun.view.LoadingDialog;
 
 import java.io.File;
@@ -114,12 +116,39 @@ public class StatusSendActivity extends BaseActivity implements View.OnClickList
     }
 
     public void pickImage() {
+        PermissionUtils.requestPermission(this, PermissionUtils.CODE_CAMERA, mPermissionGrant);
         PhotoPickerIntent intent = new PhotoPickerIntent(this);
         intent.setPhotoCount(9);
         intent.setShowCamera(true);
         startActivityForResult(intent, REQUEST_CODE);
     }
+    /**
+     * Callback received when a permissions request has been completed.
+     */
+    @Override
+    public void onRequestPermissionsResult(final int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        PermissionUtils.requestPermissionsResult(this, requestCode, permissions, grantResults, mPermissionGrant);
+    }
 
+    private PermissionUtils.PermissionGrant mPermissionGrant = new PermissionUtils.PermissionGrant() {
+        @Override
+        public void onPermissionGranted(int requestCode) {
+            switch (requestCode) {
+                case PermissionUtils.CODE_CAMERA:
+//                    Toast.makeText(StatusSendActivity.this, "Result Permission Grant CODE_CAMERA", Toast.LENGTH_SHORT).show();
+                    break;
+                case PermissionUtils.CODE_READ_EXTERNAL_STORAGE:
+//                    Toast.makeText(StatusSendActivity.this, "Result Permission Grant CODE_READ_EXTERNAL_STORAGE", Toast.LENGTH_SHORT).show();
+                    break;
+                case PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE:
+//                    Toast.makeText(StatusSendActivity.this, "Result Permission Grant CODE_WRITE_EXTERNAL_STORAGE", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

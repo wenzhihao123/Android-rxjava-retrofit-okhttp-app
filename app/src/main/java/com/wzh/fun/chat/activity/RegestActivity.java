@@ -3,6 +3,8 @@ package com.wzh.fun.chat.activity;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +23,7 @@ import com.wzh.fun.event.LoginSuccessdEvent;
 import com.wzh.fun.ui.activity.BaseActivity;
 import com.wzh.fun.ui.activity.MainActivity;
 import com.wzh.fun.utils.GlideCircleTransform;
+import com.wzh.fun.utils.PermissionUtils;
 import com.wzh.fun.view.CircleImageView;
 import com.wzh.fun.view.LoadingDialog;
 
@@ -37,7 +40,7 @@ import me.iwf.photopicker.utils.PhotoPickerIntent;
  * Created by WZH on 2016/12/8.
  */
 
-public class RegestActivity extends BaseActivity implements View.OnClickListener {
+public class RegestActivity extends BaseActivity implements View.OnClickListener,ActivityCompat.OnRequestPermissionsResultCallback {
     private EditText username;
     private EditText password;
     private EditText passwordConfirm;
@@ -54,14 +57,40 @@ public class RegestActivity extends BaseActivity implements View.OnClickListener
         setTitle("新用户注册");
         initView();
     }
-
+    private PermissionUtils.PermissionGrant mPermissionGrant = new PermissionUtils.PermissionGrant() {
+        @Override
+        public void onPermissionGranted(int requestCode) {
+            switch (requestCode) {
+                case PermissionUtils.CODE_CAMERA:
+                    Toast.makeText(RegestActivity.this, "Result Permission Grant CODE_CAMERA", Toast.LENGTH_SHORT).show();
+                    break;
+                case PermissionUtils.CODE_READ_EXTERNAL_STORAGE:
+                    Toast.makeText(RegestActivity.this, "Result Permission Grant CODE_READ_EXTERNAL_STORAGE", Toast.LENGTH_SHORT).show();
+                    break;
+                case PermissionUtils.CODE_WRITE_EXTERNAL_STORAGE:
+                    Toast.makeText(RegestActivity.this, "Result Permission Grant CODE_WRITE_EXTERNAL_STORAGE", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
     private void upload() {
+        PermissionUtils.requestPermission(this, PermissionUtils.CODE_CAMERA, mPermissionGrant);
         PhotoPickerIntent intent = new PhotoPickerIntent(RegestActivity.this);
         intent.setPhotoCount(9);
         intent.setShowCamera(true);
         startActivityForResult(intent, REQUEST_CODE);
     }
 
+    /**
+     * Callback received when a permissions request has been completed.
+     */
+    @Override
+    public void onRequestPermissionsResult(final int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        PermissionUtils.requestPermissionsResult(this, requestCode, permissions, grantResults, mPermissionGrant);
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
