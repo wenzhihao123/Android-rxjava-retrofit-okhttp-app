@@ -6,9 +6,9 @@
 
 具体看几张静态图感受看一下吧，页面不少gif太大，有apk文件可以装进去体验下：
 
-![](https://upload-images.jianshu.io/upload_images/2018489-c6e98135b1dcbdfd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
+![](https://upload-images.jianshu.io/upload_images/2018489-53076aa49baa0005.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
-![](https://upload-images.jianshu.io/upload_images/2018489-61e783e0c6c85dc7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
+![](https://upload-images.jianshu.io/upload_images/2018489-c6e98135b1dcbdfd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
 ![](https://upload-images.jianshu.io/upload_images/2018489-be512fa6c44f9bfa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
