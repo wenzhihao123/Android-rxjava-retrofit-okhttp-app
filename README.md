@@ -6,15 +6,15 @@
 
 具体看几张静态图感受看一下吧，页面不少gif太大，有apk文件可以装进去体验下：
 
-![](http://i1.piimg.com/567571/61611350ed087759.jpg)
+![](https://upload-images.jianshu.io/upload_images/2018489-c6e98135b1dcbdfd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
-![](http://i1.piimg.com/567571/884c6d855772eb7b.jpg)
+![](https://upload-images.jianshu.io/upload_images/2018489-61e783e0c6c85dc7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
-![](http://i1.piimg.com/567571/71c53438dff4b551.jpg)
+![](https://upload-images.jianshu.io/upload_images/2018489-be512fa6c44f9bfa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
-![](http://i1.piimg.com/567571/9d27b0f1ea0ddfa6.jpg)
+![](https://upload-images.jianshu.io/upload_images/2018489-a3acdce56cc363ec.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
-![](http://i1.piimg.com/567571/18314a86ecaeeefa.jpg)
+![](https://upload-images.jianshu.io/upload_images/2018489-70708aaefe436487.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400/format/webp)
 
 ## 主要技术点：
 * Base基础类的封装，toolbar封装，错误页面及加载页面，未登录页面封装；
